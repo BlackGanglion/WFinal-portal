@@ -1,14 +1,12 @@
-# antd-demo
+# The protal of 2016-CCPC-WFinal in 2016.5
 
-## Environment
+## Effect
 
-```
-node >= 4
-```
+[The link of the protal](http://acm.hdu.edu.cn/ccpc-w2016/)
 
-## Code Style
+## Technology
 
-https://github.com/airbnb/javascript
+Base on [ant-design](http://ant.design/)
 
 ## Develop
 
