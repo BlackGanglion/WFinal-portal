@@ -1,0 +1,105 @@
+import React from 'react';
+import { Table } from 'antd';
+
+class TeamList extends React.Component {
+  render() {
+    const columns = [{
+      title: '序号',
+      dataIndex: 'key'
+    }, {
+      title: '学校',
+      dataIndex: 'school'
+    }, {
+      title: '队伍名称',
+      dataIndex: 'name'
+    }];
+    const data = [{ key: '1', school: '北京航空航天大学', name: '我们吓成一团了' },
+  { key: '2', school: '北京化工大学', name: '仲基欧巴的wifi' },
+  { key: '3', school: '北京理工大学', name: '因吹丝停' },
+  { key: '4', school: '北京理工大学', name: '纸牌小分队' },
+  { key: '5', school: '北京师范大学', name: '三朵小花儿' },
+  { key: '6', school: '北京师范大学', name: '愚蠢的人类啊，喵' },
+  { key: '7', school: '北京师范大学珠海分校', name: 'FUTA v3.0 beta' },
+  { key: '8', school: '北京邮电大学', name: '蛤玮让我来采花' },
+  { key: '9', school: '长春理工大学', name: '衣服一定要收腰' },
+  { key: '10', school: '大连海事大学', name: '少女祈祷中...' },
+  { key: '11', school: '东北大学', name: '10以上' },
+  { key: '12', school: '东北大学', name: '侍从皇后与国王' },
+  { key: '13', school: '东北农业大学', name: '看妹子去的' },
+  { key: '14', school: '东北师范大学', name: '禁绝的边境线' },
+  { key: '15', school: '东北师范大学', name: '没有随便' },
+  { key: '16', school: '东北师范大学', name: '微草战队' },
+  { key: '17', school: '东北师范大学', name: '着吊倒刀，刀吊口门' },
+  { key: '18', school: '东华大学', name: '！\\\\（* - *）//！' },
+  { key: '19', school: '东华大学', name: '玻璃心，不能WA' },
+  { key: '20', school: '福州大学', name: '痴心不改' },
+  { key: '21', school: '桂林电子科技大学', name: '~~艳阳~~oo0O' },
+  { key: '22', school: '哈尔滨工业大学', name: '哈工大_翻个滚卖个萌A个题' },
+  { key: '23', school: '哈尔滨商业大学', name: 'HRBCU_克里丝塔' },
+  { key: '24', school: '杭州电子科技大学', name: '杭电ABC' },
+  { key: '25', school: '杭州师范大学', name: 'JK吧' },
+  { key: '26', school: '杭州师范大学', name: 'ZYC呃' },
+  { key: '27', school: '河海大学', name: 'GoodJob' },
+  { key: '28', school: '湖南大学', name: '克莉丝朵' },
+  { key: '29', school: '湖南工业大学', name: '旗开得胜' },
+  { key: '30', school: '华东师范大学', name: '大肥猫' },
+  { key: '31', school: '华东师范大学', name: '你们正在WA哪道题' },
+  { key: '32', school: '华东师范大学', name: '在下AC小公举，有何贵干' },
+  { key: '33', school: '华中师范大学', name: 'Nebula' },
+  { key: '34', school: '吉林大学', name: '叉姐是我男神' },
+  { key: '35', school: '江南大学', name: '无效网页' },
+  { key: '36', school: '江南大学', name: '物外花语' },
+  { key: '37', school: '江西财经大学', name: '我家喵敲可爱' },
+  { key: '38', school: '解放军理工大学', name: '喵星人' },
+  { key: '39', school: '南京大学', name: '听说名字长长的软壳才能涨的筛凝艾慕' },
+  { key: '40', school: '南京林业大学', name: '超能陆战队' },
+  { key: '41', school: '南阳理工学院', name: 'Dy3' },
+  { key: '42', school: '南阳理工学院', name: 'hgj' },
+  { key: '43', school: '南阳理工学院', name: '朵朵奇葩跳恰恰' },
+  { key: '44', school: '宁波大学', name: '都是漂亮MM' },
+  { key: '45', school: '宁波工程学院', name: '随你啊' },
+  { key: '46', school: '清华大学', name: '单身狗非交换环' },
+  { key: '47', school: '山东大学', name: '未闻队名' },
+  { key: '48', school: '山东理工大学', name: '阁下何不同风起' },
+  { key: '49', school: '山东理工大学', name: '我对你的疼爱已经到尽头了' },
+  { key: '50', school: '山东师范大学', name: '嘿嘿嘿' },
+  { key: '51', school: '上海第二工业大学', name: 'A题的航母说开就开' },
+  { key: '52', school: '上海交通大学', name: '靛蓝色的镇魂歌' },
+  { key: '53', school: '上海交通大学', name: '星火燎原' },
+  { key: '54', school: '绍兴文理学院', name: '小埋' },
+  { key: '55', school: '四川大学', name: '听说A了这题就更可爱了呢' },
+  { key: '56', school: '台州学院', name: '台院美美队1' },
+  { key: '57', school: '台州学院', name: '台院美美队2' },
+  { key: '58', school: '天津大学', name: '我要动手了' },
+  { key: '59', school: '天津大学', name: '一蓑烟雨任平生' },
+  { key: '60', school: '武汉大学', name: '教练我想打篮球' },
+  { key: '61', school: '武汉大学', name: '圣诞老人2.0' },
+  { key: '62', school: '武汉科技大学', name: 'cheerkrystal' },
+  { key: '63', school: '武汉科技大学', name: '宋仲基老婆团到此一游' },
+  { key: '64', school: '浙江财经大学', name: '浙江财经的MM1' },
+  { key: '65', school: '浙江财经大学', name: '浙江财经的MM2' },
+  { key: '66', school: '浙江大学城市学院', name: 'zucc01' },
+  { key: '67', school: '浙江大学城市学院', name: 'zucc02' },
+  { key: '68', school: '浙江大学宁波理工学院', name: '玩玩试试' },
+  { key: '69', school: '浙江工业大学', name: '星露谷物语' },
+  { key: '70', school: '浙江科技学院', name: '看你爸飞了' },
+  { key: '71', school: '浙江理工大学', name: '你好像很好吃' },
+  { key: '72', school: '浙江农林大学', name: '在青青草原上抓羊队' },
+  { key: '73', school: '浙江师范大学', name: '木木木木木子' },
+  { key: '74', school: '浙江师范大学', name: '正负零' },
+  { key: '75', school: '浙江中医药大学', name: '爱可才点一污子孩女' },
+  { key: '76', school: '浙江中医药大学', name: '小点点' },
+  { key: '77', school: '郑州师范学院', name: '宝宝，我爱上了一只狐狸' },
+  { key: '78', school: '郑州师范学院', name: '不，兔纸才可爱' },
+  { key: '79', school: '郑州师范学院', name: '你们知道骆驼为什么有三个鼓包么？' },
+  { key: '80', school: '中国地质大学（武汉）', name: '地大女生1队' },
+  { key: '81', school: '中国计量大学', name: '橙汁' },
+  { key: '82', school: '重庆邮电大学', name: '你看到了我的节操吗？' },
+  { key: '83', school: '重庆邮电大学', name: '你没有节操吧' }];
+    return (
+      <Table columns={columns} dataSource={data} pagination={false} bordered />
+    )
+  };
+}
+
+export default TeamList;
